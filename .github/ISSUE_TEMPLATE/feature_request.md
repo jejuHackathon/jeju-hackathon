@@ -1,20 +1,30 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
+about: Suggest new Feature Request for this project
+title: "[FE | BE] {ISSUE_TITLE}"
 labels: ''
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## 🤷‍♂️ Description
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+<!-- 구현하고자 하는 기능에 대해 작성해 주세요. -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+
+## 📝 Primary Commits
+
+<!-- 세부 구현 사항을 리스트로 작성해주세요. -->
+
+- [X] 세부 구현 사항 1
+- [ ] 세부 구현 사항 2
+- [ ] 세부 구현 사항 3
+
+## 📷 Screenshots
+
+<!--스크린샷으로 보여줄 수 있는 이미지가 있다면 첨부해주세요!-->
+
+
+
+<!--마지막으로 이슈 생성 시 우측의 옵션들을 체크했는지 확인해주세요!-->
