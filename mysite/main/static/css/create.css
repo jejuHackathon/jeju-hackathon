@@ -1,0 +1,59 @@
+.content-area {
+    padding: 3rem 0;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.content-area__title {
+    margin-bottom: 3rem;
+    font-size: var(--font-40);
+    font-weight: var(--font-w-700);
+}
+
+.form-box {
+    width: 50rem;
+    margin-bottom: 2rem;
+}
+
+.form-box .form-radio-wrapper {
+    width: 32rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-radio-wrapper .form-radio__label {
+    cursor: pointer;
+}
+
+.form-box .form-box--label {
+    width: 16.875rem;
+    color: var(--color-pale-grey);
+    font-size: var(--font-16);
+    font-weight: var(--font-w-500);
+}
+
+.form-box .form-box--input {
+    width: 18.875rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: var(--color-placehoder);
+    border-radius: 0.75rem;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+.submit-button .submit-button--input {
+    width: 15.625rem;
+    height: 4rem;
+    border-radius: 1rem;
+    font-size: var(--font-20);
+    background-color: var(--color-clear-orange);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.submit-button .submit-button--input:hover {
+    opacity: .8;
+}
