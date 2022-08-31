@@ -3,34 +3,36 @@
 {% load static %}
 <article class="content-area">
     <header>
-        <h1 class="content-area__title">동검은이오름 상세페이지</h1>
+        <h1 class="content-area__title">{{oreum.name}} 상세페이지</h1>
     </header>
     <!-- 이미지 캐러셀 + 자동 무한슬라이딩 구현예정 -->
     <section class="oreum-list">
+        {% if oreum.mainphoto %}
         <img src="{% static 'images/sample.png' %}" class="oreum-list--big" alt="오름 사진" />
+        {% endif %}
         <div class="oreum-list flex-col">
             <div class="oreum-list__info flex-col">
                 <div class="oreum-list__box flex-row">
-                    <h2 class="oreum-list--title">동검은이오름</h2>
+                    <h2 class="oreum-list--title">{{oreum.name}}</h2>
                     <div class="flex-row">
-                        <div class="oreum-list--tag">경사 완만</div>
-                        <div class="oreum-list--tag">야경 좋음</div>
+                        <div class="oreum-list--tag">{{oreum.oreumlevel}}</div>
+                        <div class="oreum-list--tag">{{oreum.nightview}}</div>
                     </div>
                 </div>
                 <div class="oreum-list__box flex-row">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore blanditiis ipsam eveniet optio, unde, quas est vero enim ex, illum eum sapiente tempore! Officia repudiandae ut modi distinctio, rem porro!</p>
+                    <p>{{oreum.content}}</p>
                 </div>
                 <div class="oreum-list__box flex-row">
                     <img src="{% static 'icons/location.svg' %}" alt="오름 위치 지역" />
-                    <span>Jeju-si</span>
+                    <span>{{oreum.location}}</span>
                 </div>
                 <div class="oreum-list__box flex-row">
                     <img src="{% static 'icons/phone.svg' %}" alt="전화번호" />
-                    <span>010-1111-2222</span>
+                    <span>{{oreum.phone}}</span>
                 </div>
                 <div class="oreum-list__box flex-row">
                     <img src="{% static 'icons/instagram.svg' %}" alt="인스타그램 URL" />
-                    <span>instagram url</span>
+                    <span>{{oreum.insta}}</span>
                 </div>
             </div>
         </div>
