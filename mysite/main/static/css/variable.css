@@ -1,11 +1,13 @@
 :root {
     --max-width: 62.5rem;
     --gnb-height: 4rem;
+    --color-orange: #FF8E14;
     --color-clear-orange : #FF6904;
     --color-white: #fff;
-    --color-pale-gray: #bdbdbd;
-    --color-gray: #222;
-    --color-dark-gray: #191a1c;
+    --color-pale-grey: #BCBCBC;
+    --color-grey: #222;
+    --color-dark-grey: #191a1c;
+    --color-placehoder: #EFF0F6;
     --color-transparent: transparent;
     --font-12: 0.75rem;
     --font-14: 0.875rem;
@@ -14,6 +16,7 @@
     --font-20: 1.25rem;
     --font-28: 1.75rem;
     --font-32: 2rem;
+    --font-40: 2.5rem;
     --font-w-500: 500;
     --font-w-700: 700;
 }
