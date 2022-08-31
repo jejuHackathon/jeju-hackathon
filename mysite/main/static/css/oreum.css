@@ -1,0 +1,47 @@
+.oreum-list {
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.oreum-list .oreum-list__link {
+    color: var(--color-dark-grey);
+}
+
+.oreum-list .oreum-list--mid {
+    width: 34rem;
+    height: 22rem;
+}
+
+.oreum-list .oreum-list--big {
+    width: 45rem;
+    height: 30rem;
+}
+
+.oreum-list .oreum-list__info {
+    padding: 2rem 0;
+    gap: 1rem
+}
+
+.oreum-list__info .oreum-list__box {
+    width: 30rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.oreum-list__box .oreum-list--title {
+    font-size: var(--font-40);
+    font-weight: var(--font-w-700);
+}
+
+.oreum-list__box .oreum-list--tag {
+    width: 5rem;
+    height: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    font-size: var(--font-12);
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}

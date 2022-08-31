@@ -13,38 +13,38 @@ def about(request):
     return render(request, 'main/about.html')
 
 
-def oreumlist(request):
-    
+def list(request):
+
     selected_locations = request.GET.getlist('locations')
     search = request.GET.get('search')
-    
+
     if selected_locations:
-        oreums = oreum.objects.filter(location__in=selected_locations)
+        oreums = Oreum.objects.filter(locationin=selected_locations)
     elif search:
-        oreums = oreum.objects.filter(name__icontains=search)
+        oreums = Oreum.objects.filter(nameicontains=search)
     else:
-        oreums = oreum.objects.all()
-    
+        oreums = Oreum.objects.all()
+
     context = {
         'oreums': oreums
     }
-    
-    return render(request, 'main/oreumlist.html', context)
+
+    return render(request, 'main/list.html', context)
 
 
-def oreumdetails(request, pk):
-    oreum = Oreum.objects.get(pk=pk)
-    
-    context = {
-        'oreum': oreum,
-    }
-    
-    return render(request, 'main/oreumdetails.html', context)
+def detail(request):
+    # oreum = Oreum.objects.get(pk=pk)
+
+    # context = {
+    #     'oreum': oreum,
+    # }
+
+    return render(request, 'main/detail.html')
 
 
-def write(request):
+def create(request):
     if request.method == 'POST':
-        
+
         data = {
             'name': request.POST.get('name'),
             'location': request.POST.get('location'),
@@ -54,13 +54,13 @@ def write(request):
             'mainphoto': request.FILES.get('mainphoto'),
             'subphoto': request.FILES.get('subphoto'),
         }
-        
+
         oreum = Oreum.objects.create(**data)
-        
+
         return redirect(f'/oreumlist/{oreum.pk}/')
-    
+
     context = {
         'locations': Oreum.locations,
     }
-        
-    return render(request, 'main/write.html', context)
+
+    return render(request, 'main/create.html', context)
