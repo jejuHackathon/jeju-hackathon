@@ -6,6 +6,12 @@
     transition: .3s;
     cursor: pointer;
 }
+
+.nav_sec1_logo .logo {
+    font-size: var(--font-32);
+    gap: 1rem;
+}
+
 .nav_sec1_logo svg path:hover,
 .nav_sec1_logo svg path:hover ~ .logo_text {
     stroke: #fff;

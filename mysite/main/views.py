@@ -32,14 +32,14 @@ def list(request):
     return render(request, 'main/list.html', context)
 
 
-def detail(request):
-    # oreum = Oreum.objects.get(pk=pk)
+def detail(request, pk):
+    oreum = Oreum.objects.get(pk=pk)
 
-    # context = {
-    #     'oreum': oreum,
-    # }
+    context = {
+        'oreum': oreum,
+    }
 
-    return render(request, 'main/detail.html')
+    return render(request, 'main/detail.html', context)
 
 
 def create(request):
@@ -57,10 +57,12 @@ def create(request):
 
         oreum = Oreum.objects.create(**data)
 
-        return redirect(f'/oreumlist/{oreum.pk}/')
+        return redirect(f'/list/{oreum.pk}/')
 
     context = {
         'locations': Oreum.locations,
+        'oreumlevels': Oreum.oreumlevels,
+        'nightviews': Oreum.nightviews
     }
 
     return render(request, 'main/create.html', context)

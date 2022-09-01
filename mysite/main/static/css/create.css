@@ -28,6 +28,14 @@
     border-radius: 0.75rem;
 }
 
+.form-box .form-box--textarea {
+    resize: none;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--color-placehoder);
+}
+
 .submit-button {
     text-align: center;
 }
