@@ -1,0 +1,24 @@
+@import 'variable.css';
+@import 'common.css';
+@import 'reset.css';
+@import 'base.css';
+@import 'list.css';
+@import 'home.css';
+@import 'create.css';
+@import 'oreum.css';
+@import 'modal.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+input {
+    border: none;
+    outline: none;
+}

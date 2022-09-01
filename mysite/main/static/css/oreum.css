@@ -1,0 +1,87 @@
+.oreum-list__header {
+    gap: 1rem;
+}
+
+.oreum-list {
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.oreum-list .oreum-list__link {
+    color: var(--color-dark-grey);
+}
+
+.oreum-list .oreum-list--mid {
+    max-width: 34rem;
+    max-height: 22rem;
+}
+
+.oreum-list .oreum-list--big {
+    max-width: 45rem;
+    max-height: 30rem;
+}
+
+.oreum-list .oreum-list__info {
+    padding: 2rem 0;
+    gap: 1rem
+}
+
+.oreum-list__info .oreum-list__box {
+    width: 30rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.oreum-list__box .oreum-list--title {
+    font-size: var(--font-40);
+    font-weight: var(--font-w-700);
+}
+
+.oreum-list__box .oreum-list--tag {
+    width: 5rem;
+    height: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    font-size: var(--font-12);
+    color: var(--color-white);
+}
+
+.oreum-list__box .oreum-list--level-tag {
+    background-color: var(--color-orange);
+}
+
+.oreum-list__box .oreum-list--view-tag {
+    background-color: var(--color-lime);
+}
+
+.oreum__button {
+    gap: 1rem;
+}
+
+.oreum__button .oreum__button--modify,
+.oreum__button .oreum__button--delete {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2.2rem;
+    cursor: pointer;
+}
+
+.oreum__button .oreum__button--modify {
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+}
+
+.oreum__button .oreum__button--delete {
+    background-color: var(--color-light-red);
+    color: var(--color-white);
+}
+
+.oreum__button .oreum__button--modify:hover,
+.oreum__button .oreum__button--delete:hover {
+    opacity: .8;
+}
