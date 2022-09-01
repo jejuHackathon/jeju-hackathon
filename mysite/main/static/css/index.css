@@ -5,6 +5,7 @@
 @import 'home.css';
 @import 'create.css';
 @import 'oreum.css';
+@import 'modal.css';
 
 * {
     box-sizing: border-box;
