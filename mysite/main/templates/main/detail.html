@@ -2,21 +2,25 @@
 {% block content %}
 {% load static %}
 <article class="content-area">
-    <header>
+    <header class="oreum-list__header flex-row">
         <h1 class="content-area__title">{{oreum.name}} 상세페이지</h1>
+        <div class="oreum__button flex-row">
+            <button class="oreum__button--modify" data-id="{{oreum.pk}}">수정</button>
+            <button class="oreum__button--delete" data-id="{{oreum.pk}}" value="{{oreum.name}}">삭제</button>
+        </div>
     </header>
     <!-- 이미지 캐러셀 + 자동 무한슬라이딩 구현예정 -->
     <section class="oreum-list">
         {% if oreum.mainphoto %}
-        <img src="{% static 'images/sample.png' %}" class="oreum-list--big" alt="오름 사진" />
+            <img src="{% static 'images/sample.png' %}" class="oreum-list--big" alt="오름 사진" />
         {% endif %}
         <div class="oreum-list flex-col">
             <div class="oreum-list__info flex-col">
                 <div class="oreum-list__box flex-row">
                     <h2 class="oreum-list--title">{{oreum.name}}</h2>
                     <div class="flex-row">
-                        <div class="oreum-list--tag">{{oreum.oreumlevel}}</div>
-                        <div class="oreum-list--tag">{{oreum.nightview}}</div>
+                        <div class="oreum-list--tag oreum-list--level-tag">{{oreum.oreumlevel}}</div>
+                        <div class="oreum-list--tag oreum-list--view-tag">{{oreum.nightview}}</div>
                     </div>
                 </div>
                 <div class="oreum-list__box flex-row">
@@ -61,6 +65,3 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 {% endblock content %}
-
-{% block js %}
-{% endblock js %}

@@ -1,3 +1,7 @@
+.oreum-list__header {
+    gap: 1rem;
+}
+
 .oreum-list {
     margin-bottom: 3rem;
     gap: 3rem;
@@ -51,4 +55,33 @@
 
 .oreum-list__box .oreum-list--view-tag {
     background-color: var(--color-lime);
+}
+
+.oreum__button {
+    gap: 1rem;
+}
+
+.oreum__button .oreum__button--modify,
+.oreum__button .oreum__button--delete {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2.2rem;
+    cursor: pointer;
+}
+
+.oreum__button .oreum__button--modify {
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+}
+
+.oreum__button .oreum__button--delete {
+    background-color: var(--color-light-red);
+    color: var(--color-white);
+}
+
+.oreum__button .oreum__button--modify:hover,
+.oreum__button .oreum__button--delete:hover {
+    opacity: .8;
 }

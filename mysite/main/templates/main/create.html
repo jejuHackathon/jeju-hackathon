@@ -21,7 +21,7 @@
             </div>
             <div class="form-box flex-row">
                 <label for="name" class="form-box--label">오름이름</label>
-                <input id="name" class="form-box--input" type="text" name="name" placeholder="오름 이름을 입력해주세요" required />
+                <input id="name" class="form-box--input" type="text" name="name" maxlength="20" placeholder="오름 이름을 입력해주세요" required />
             </div>
             <div class="form-box flex-row">
                 <span class="form-box--label">오름경사</span>
@@ -47,15 +47,15 @@
             </div>
             <div class="form-box flex-row">
                 <label for="phone" class="form-box--label">연락처</label>
-                <input id="phone" class="form-box--input" type="text" name="phone" placeholder="010-1111-2222" required />
+                <input id="phone" class="form-box--input" type="tel" name="phone" placeholder="010-1111-2222" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required />
             </div>
             <div class="form-box flex-row">
                 <label for="insta" class="form-box--label">인스타계정</label>
-                <input id="insta" class="form-box--input" type="text" name="insta" placeholder="URL" required />
+                <input id="insta" class="form-box--input" type="text" name="insta" placeholder="URL" />
             </div>
             <div class="form-box flex-row">
                 <label for="content" class="form-box--label">오름소개</label>
-                <textarea id="content" cols="50" rows="10" name="content" required></textarea>
+                <textarea id="content" class="form-box--textarea" cols="50" rows="10" name="content" placeholder="오름에대한 설명" required></textarea>
             </div>
             <div class="form-box flex-row">
                 <label for="mainphoto" class="form-box--label">사진1</label>

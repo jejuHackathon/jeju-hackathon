@@ -2,10 +2,6 @@
     background-color: var(--color-clear-orange);
 }
 
-.logo {
-    font-size: var(--font-32)
-}
-
 .header-wrapper {
     width: var(--max-width);
     height: var(--gnb-height);
