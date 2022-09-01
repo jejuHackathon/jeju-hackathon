@@ -44,11 +44,20 @@
             </div>
         </div>
     </header>
+    <div class="modal">
+        <div class="modal-body">
+            <div class="modal-content"></div>
+            <div class="modal-ok-button flex-row">
+                <button type="button">확인</button>
+            </div>
+        </div>
+    </div>
 
     {% block content %}
     {% endblock content %}
 
     {% block js %}
+    <script src="{% static 'js/index.js' %}" type="module"></script>
     {% endblock js %}
 </body>
 </html>
