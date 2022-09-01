@@ -1,63 +1,63 @@
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="about.css">
+{% extends "main/base.html" %}
 
-<body>
-    <div class="nav"></div>
-    <section class="about">
-        <div class="main_svg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="316.39" height="171.246" viewBox="0 0 316.39 171.246">
-                <g id="그룹_2" data-name="그룹 2" transform="translate(-561.805 -283.754)">
-                    <path id="교차_1" data-name="교차 1"
-                        d="M91.8,223a11,11,0,0,1-8.778-17.629l78.692-104.2a11,11,0,0,1,8.734-4.37c5.572-.022,6.044-.027,34.6,38.322l59.658-79a11,11,0,0,1,17.556,0l112.71,149.246A11,11,0,0,1,386.2,223ZM386.2,212h0ZM204.951,153.42l-.085-.115ZM170.5,107.8s0,0,0,0A0,0,0,0,0,170.5,107.8Z"
-                        transform="translate(481 232)" fill="#ff6b07" />
-                    <text id="오름올래_" data-name="오름올래?" transform="translate(745.057 438)" fill="#fff" font-size="50"
-                        font-family="GangwonEduAllBold, GangwonEduAll">
-                        <tspan x="-94.9" y="0">오름올래?</tspan>
-                    </text>
-                </g>
-            </svg>
-        </div>
+{% block content %}
+{% load static %}
+<div class="nav"></div>
+<section class="about">
+    <div class="main_svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="316.39" height="171.246" viewBox="0 0 316.39 171.246">
+            <g id="그룹_2" data-name="그룹 2" transform="translate(-561.805 -283.754)">
+                <path id="교차_1" data-name="교차 1"
+                    d="M91.8,223a11,11,0,0,1-8.778-17.629l78.692-104.2a11,11,0,0,1,8.734-4.37c5.572-.022,6.044-.027,34.6,38.322l59.658-79a11,11,0,0,1,17.556,0l112.71,149.246A11,11,0,0,1,386.2,223ZM386.2,212h0ZM204.951,153.42l-.085-.115ZM170.5,107.8s0,0,0,0A0,0,0,0,0,170.5,107.8Z"
+                    transform="translate(481 232)" fill="#ff6b07" />
+                <text id="오름올래_" data-name="오름올래?" transform="translate(745.057 438)" fill="#fff" font-size="50"
+                    font-family="GangwonEduAllBold, GangwonEduAll">
+                    <tspan x="-94.9" y="0">오름올래?</tspan>
+                </text>
+            </g>
+        </svg>
+    </div>
 
-        <div class="content_box">
-            <div class="title">오름?</div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="33" viewBox="0 0 3 33">
-                <line id="선_2" data-name="선 2" y2="30" transform="translate(1.5 1.5)" fill="none" stroke="#ff6b07"
-                    stroke-linecap="round" stroke-width="3" />
-            </svg>
-            <p class="nanumgothiccoding">제주도의 한라산 정상 백록담을 제외한<br>
-                제주특별자치도 전역에 분포하는 단성화산을 말해요!</p>
-        </div>
-        <div class="content_box">
-            <div class="title">어바웃 오름올래!</div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="33" viewBox="0 0 3 33">
-                <line id="선_2" data-name="선 2" y2="30" transform="translate(1.5 1.5)" fill="none" stroke="#ff6b07"
+    <div class="content_box">
+        <div class="title">오름?</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="33" viewBox="0 0 3 33">
+            <line id="선_2" data-name="선 2" y2="30" transform="translate(1.5 1.5)" fill="none" stroke="#ff6b07"
                 stroke-linecap="round" stroke-width="3" />
-            </svg>
-            <p class="nanumgothiccoding"> 제주도의 아름다운 오름들을 찾아보실 수 있어요!<br>
-                어디에 어떤 오름이 있는지, 어떤 특징을 가지고 있는지 알아볼까요?</p>
-        </div>
+        </svg>
+        <p class="nanumgothiccoding">제주도의 한라산 정상 백록담을 제외한<br>
+            제주특별자치도 전역에 분포하는 단성화산을 말해요!</p>
+    </div>
+    <div class="content_box">
+        <div class="title">어바웃 오름올래!</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="3" height="33" viewBox="0 0 3 33">
+            <line id="선_2" data-name="선 2" y2="30" transform="translate(1.5 1.5)" fill="none" stroke="#ff6b07"
+            stroke-linecap="round" stroke-width="3" />
+        </svg>
+        <p class="nanumgothiccoding"> 제주도의 아름다운 오름들을 찾아보실 수 있어요!<br>
+            어디에 어떤 오름이 있는지, 어떤 특징을 가지고 있는지 알아볼까요?</p>
+    </div>
 
-        <div class="profile">
-            <div class="prof_box">
-                <div class="prof_img"></div>
-                <div class="prof_name">김성진</div>
-                <div class="prof_mbti">ISFJ</div>
-            </div>
-            <div class="prof_box">
-                <div class="prof_img"></div>
-                <div class="prof_name">오흥식</div>
-                <div class="prof_mbti">INFP</div>
-            </div>
-            <div class="prof_box">
-                <div class="prof_img"></div>
-                <div class="prof_name">이진혁</div>
-                <div class="prof_mbti">ESFJ</div>
-            </div>
-            <div class="prof_box">
-                <div class="prof_img"></div>
-                <div class="prof_name">허진영</div>
-                <div class="prof_mbti">ISFJ</div>
-            </div>
+    <div class="profile">
+        <div class="prof_box">
+            <div class="prof_img"></div>
+            <div class="prof_name">김성진</div>
+            <div class="prof_mbti">ISFJ</div>
         </div>
-    </section>
-</body>
+        <div class="prof_box">
+            <div class="prof_img"></div>
+            <div class="prof_name">오흥식</div>
+            <div class="prof_mbti">INFP</div>
+        </div>
+        <div class="prof_box">
+            <div class="prof_img"></div>
+            <div class="prof_name">이진혁</div>
+            <div class="prof_mbti">ESFJ</div>
+        </div>
+        <div class="prof_box">
+            <div class="prof_img"></div>
+            <div class="prof_name">허진영</div>
+            <div class="prof_mbti">ISFJ</div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
