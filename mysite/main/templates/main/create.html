@@ -1,0 +1,77 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+{% load static %}
+    <article class="content-area">
+        <header>
+            <h1 class="content-area__title">오름등록</h1>
+        </header>
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-box flex-row">
+                <span class="form-box--label">오름위치</span>
+                    <div class="form-radio-wrapper flex-row">
+                        {% for location in locations %}
+                        <label class="form-radio__label">
+                            <input id="location" type="radio" name="location" value="{{ location.1 }}" required />
+                            <span class="form-radio--text">{{ location.1 }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+            </div>
+            <div class="form-box flex-row">
+                <label for="name" class="form-box--label">오름이름</label>
+                <input id="name" class="form-box--input" type="text" name="name" maxlength="20" placeholder="오름 이름을 입력해주세요" required />
+            </div>
+            <div class="form-box flex-row">
+                <span class="form-box--label">오름경사</span>
+                <div class="form-radio-wrapper flex-row">
+                    {% for oreumlevel in oreumlevels %}
+                    <label class="form-radio__label">
+                        <input id="oreumlevels" type="radio" name="oreumlevels" value="{{ oreumlevel.1 }}" required />
+                        <span class="form-radio--text">{{ oreumlevel.1 }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="form-box flex-row">
+                <span class="form-box--label">오름야경</span>
+                <div class="form-radio-wrapper flex-row">
+                    {% for nightview in nightviews %}
+                    <label class="form-radio__label">
+                        <input id="nightviews" type="radio" name="nightviews" value="{{ nightview.1 }}" required />
+                        <span class="form-radio--text">{{ nightview.1 }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="form-box flex-row">
+                <label for="phone" class="form-box--label">연락처</label>
+                <input id="phone" class="form-box--input" type="tel" name="phone" placeholder="010-1111-2222" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required />
+            </div>
+            <div class="form-box flex-row">
+                <label for="insta" class="form-box--label">인스타계정</label>
+                <input id="insta" class="form-box--input" type="text" name="insta" placeholder="URL" />
+            </div>
+            <div class="form-box flex-row">
+                <label for="content" class="form-box--label">오름소개</label>
+                <textarea id="content" class="form-box--textarea" cols="50" rows="10" name="content" placeholder="오름에대한 설명" required></textarea>
+            </div>
+            <div class="form-box flex-row">
+                <label for="mainphoto" class="form-box--label">사진1</label>
+                <input id="mainphoto" type="file" name="mainphoto" required />
+            </div>
+            <div class="form-box flex-row">
+                <label for="subphoto" class="form-box--label">사진2</label>
+                <input id="subphoto" type="file" name="subphoto" />
+            </div>
+            <div class="form-box submit-button">
+                <input type="submit" class="submit-button--input" value="등록하기" />
+            </div>
+        </form>
+    </article>
+{% endblock content %}
+
+
+{% block js %}
+{% endblock js %}

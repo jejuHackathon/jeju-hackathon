@@ -1,0 +1,67 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<article class="content-area">
+    <header class="oreum-list__header flex-row">
+        <h1 class="content-area__title">{{oreum.name}} 상세페이지</h1>
+        <div class="oreum__button flex-row">
+            <button class="oreum__button--modify" data-id="{{oreum.pk}}">수정</button>
+            <button class="oreum__button--delete" data-id="{{oreum.pk}}" value="{{oreum.name}}">삭제</button>
+        </div>
+    </header>
+    <!-- 이미지 캐러셀 + 자동 무한슬라이딩 구현예정 -->
+    <section class="oreum-list">
+        {% if oreum.mainphoto %}
+            <img src="{% static 'images/sample.png' %}" class="oreum-list--big" alt="오름 사진" />
+        {% endif %}
+        <div class="oreum-list flex-col">
+            <div class="oreum-list__info flex-col">
+                <div class="oreum-list__box flex-row">
+                    <h2 class="oreum-list--title">{{oreum.name}}</h2>
+                    <div class="flex-row">
+                        <div class="oreum-list--tag oreum-list--level-tag">{{oreum.oreumlevel}}</div>
+                        <div class="oreum-list--tag oreum-list--view-tag">{{oreum.nightview}}</div>
+                    </div>
+                </div>
+                <div class="oreum-list__box flex-row">
+                    <p>{{oreum.content}}</p>
+                </div>
+                <div class="oreum-list__box flex-row">
+                    <img src="{% static 'icons/location.svg' %}" alt="오름 위치 지역" />
+                    <span>{{oreum.location}}</span>
+                </div>
+                <div class="oreum-list__box flex-row">
+                    <img src="{% static 'icons/phone.svg' %}" alt="전화번호" />
+                    <span>{{oreum.phone}}</span>
+                </div>
+                <div class="oreum-list__box flex-row">
+                    <img src="{% static 'icons/instagram.svg' %}" alt="인스타그램 URL" />
+                    <span>{{oreum.insta}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+
+<!-- 댓글 시작 -->
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jejucodingcafe-muffin.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+{% endblock content %}

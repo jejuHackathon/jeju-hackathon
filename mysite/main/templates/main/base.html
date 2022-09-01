@@ -1,0 +1,63 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오름 올래?</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+</head>
+<body>
+    <header class="global-header">
+        <div class="header-wrapper flex-row">
+            <div class="nav_sec1_logo">
+                <a class="logo flex-row" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" viewBox="-4 -1.5 40 20">
+                        <path id="패스_1" data-name="패스 1"
+                            d="M332.385-162.353l8.862-11.734c.031-.04,3.883,5.142,3.883,5.142l7.714-10.215,12.692,16.806Z"
+                            transform="translate(-331.885 179.659)" fill="none" stroke="#707070" stroke-linejoin="round"
+                            stroke-width="1" />
+                    </svg>
+                    <h1>오름 올래?</h1>
+                </a>
+            </div>
+            <div class="header-menu flex-row">
+                <ul class="header-menu__ul flex-row">
+                    <li class="header-menu__link">
+                        <a href="/about">서비스 소개</a>
+                    </li>
+                    <li class="header-menu__link">
+                        <a href="/list">오름들</a>
+                    </li>
+                    <li class="header-menu__link">
+                        <a href="/create">오름 등록</a>
+                    </li>
+                </ul>
+                <form action="/list/" class="search-oreum-form">
+                    <div class="search-input-wrapper flex-row">
+                        <input type="search" class="search-input" placeholder="찾고 싶은 오름" name="search" />
+                        <img src="{% static 'icons/medium-search.svg' %}" class="search-img" alt="검색 버튼" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="modal">
+        <div class="modal-body">
+            <div class="modal-content"></div>
+            <div class="modal-ok-button flex-row">
+                <button type="button">확인</button>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block js %}
+    <script src="{% static 'js/index.js' %}" type="module"></script>
+    {% endblock js %}
+</body>
+</html>
