@@ -5,8 +5,10 @@
     <header class="oreum-list__header flex-row">
         <h1 class="content-area__title">{{oreum.name}} 상세페이지</h1>
         <div class="oreum__button flex-row">
-            <button class="oreum__button--modify" data-id="{{oreum.pk}}">수정</button>
-            <button class="oreum__button--delete" data-id="{{oreum.pk}}" value="{{oreum.name}}">삭제</button>
+            {% if oreum.nickname == nickname %}
+                <button class="oreum__button--modify" data-id="{{oreum.pk}}"> <a href="/update/{{oreum.pk}}">수정</a></button>
+                <button class="oreum__button--delete" data-id="{{oreum.pk}}" value="{{oreum.name}}"><a href="/delete/{{oreum.pk}}">삭제</a></button>
+            {% endif %}
         </div>
     </header>
     <!-- 이미지 캐러셀 + 자동 무한슬라이딩 구현예정 -->
