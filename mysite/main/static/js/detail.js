@@ -1,4 +1,5 @@
 export default function Detail() {
+    const oreumDetailButton = document.querySelector('.oreum__button');
     const handleButtonClick = (e) => {
         const $button = e.target.closest('button');
         if($button) {
@@ -16,5 +17,5 @@ export default function Detail() {
         }
     }
     
-    document.querySelector('.oreum__button').addEventListener('click', handleButtonClick);
+    oreumDetailButton?.addEventListener('click', handleButtonClick);
 }
