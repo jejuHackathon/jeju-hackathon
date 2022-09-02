@@ -6,9 +6,9 @@ const init = () => {
     const route = () => {
         const { pathname } = location;
         if(pathname !== '/') {
-            const nickName = getItem('nickName', '');
-            if(!nickName) {
-                console.log(nickName);
+            const nickname = getItem('nickname', '');
+            if(!nickname) {
+                console.log(nickname);
                 location.href = "/";
             }
         }

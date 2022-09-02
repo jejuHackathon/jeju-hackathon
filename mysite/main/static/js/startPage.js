@@ -3,27 +3,27 @@ import { getItem, setItem } from './storage.js';
 export default function StartPage() {
     const nickNameInput = document.querySelector('.oreum-start__nickname');
     const learnButton = document.querySelector('.oreum-start__learn-button');
-    let nickName = '';
+    let nickname = '';
 
     const init = () => {
         nickNameInput?.addEventListener('change', handleOnChangeNickName);
         learnButton?.addEventListener('click', handleOnClickLearnButton);
-        nickName = getItem('nickName', '');
-        if(nickName) {
+        nickname = getItem('nickname', '');
+        if(nickname) {
             location.href = "/home";
         }
     }
 
     const handleOnChangeNickName = (e) => {
-        nickName = e.target.value;
+        nickname = e.target.value;
     }
 
     const handleOnClickLearnButton = () => {
-        if(!nickName) {
+        if(!nickname) {
             alert('값을 입력해주세요!')
             return;
         }
-        setItem('nickName', nickName);
+        setItem('nickname', nickname);
         location.href = "/home";
     }
 
