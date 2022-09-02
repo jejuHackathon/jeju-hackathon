@@ -1,0 +1,40 @@
+.oreum-start {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.oreum-start .oreum-start__box {
+    gap: 2rem;
+    align-items: center;
+}
+
+.oreum-start .oreum-start__title {
+    font-size: var(--font-40);
+    text-align: center;
+}
+
+.oreum-start .oreum-start__title strong {
+    color: var(--color-clear-orange);
+}
+
+.oreum-start .oreum-start__nickname {
+    width: 21.875rem;
+    height: 2.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-clear-orange);
+    border-radius: 1rem;
+}
+
+.oreum-start .oreum-start__learn-button {
+    width: 15.625rem;
+    height: 4rem;
+    border-radius: 1rem;
+    font-size: var(--font-20);
+    background-color: var(--color-clear-orange);
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
