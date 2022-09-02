@@ -41,6 +41,7 @@ class Oreum(models.Model):
     content = models.TextField()
     phone = models.CharField(max_length=13, null=True)
     insta = models.CharField(max_length=50, null=True)
+    nickname = models.CharField(max_length=30, default="admin")
     
     def __str__(self):
         return self.name
