@@ -28,7 +28,7 @@
                 <div class="form-radio-wrapper flex-row">
                     {% for oreumlevel in oreumlevels %}
                     <label class="form-radio__label">
-                        <input id="oreumlevels" type="radio" name="oreumlevels" value="{{ oreumlevel.1 }}" required />
+                        <input id="oreumlevels" type="radio" name="oreumlevel" value="{{ oreumlevel.1 }}" required />
                         <span class="form-radio--text">{{ oreumlevel.1 }}</span>
                     </label>
                     {% endfor %}
@@ -39,7 +39,7 @@
                 <div class="form-radio-wrapper flex-row">
                     {% for nightview in nightviews %}
                     <label class="form-radio__label">
-                        <input id="nightviews" type="radio" name="nightviews" value="{{ nightview.1 }}" required />
+                        <input id="nightviews" type="radio" name="nightview" value="{{ nightview.1 }}" required />
                         <span class="form-radio--text">{{ nightview.1 }}</span>
                     </label>
                     {% endfor %}
