@@ -5,13 +5,15 @@ from .models import Oreum
 def index(request):
     
     # 닉네임을 입력 받으면 index 페이지로 이동 
-    if request.method == 'POST':
-        context = {
-            'locations' : Oreum.locations,
-        }
-        return render(request, 'main/index.html', context)
+    # if request.method == 'POST':
+    return render(request, 'main/index.html')
 
-    return render(request, 'main/nickname.html')
+
+def home(request):
+    context = {
+        'locations' : Oreum.locations
+    }
+    return render(request, 'main/home.html', context)
 
 def about(request):
     return render(request, 'main/about.html')
@@ -42,7 +44,7 @@ def detail(request, pk):
     context = {
         'oreum': oreum,
         # context에 nickname값 추가 
-        'nickname': request.COOKIES.get('nickname'), 
+        'nickname': request.COOKIES.get('nickname'),
     }
 
     return render(request, 'main/detail.html', context)
@@ -60,8 +62,8 @@ def create(request):
             'content': request.POST.get('content'),
             'mainphoto': request.FILES.get('mainphoto'),
             'subphoto': request.FILES.get('subphoto'),
-            # cookie에 저장된 nickname값을 읽어와 nickname 컬럼에 저장 
-            'nickname': request.COOKIES.get('nickname')        
+            # cookie에 저장된 nickname값을 읽어와 nickname 컬럼에 저장
+            'nickname': request.COOKIES.get('nickname')
         }
 
         oreum = Oreum.objects.create(**data)
