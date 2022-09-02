@@ -25,9 +25,9 @@ def list(request):
     search = request.GET.get('search')
 
     if selected_locations:
-        oreums = Oreum.objects.filter(locationin=selected_locations)
+        oreums = Oreum.objects.filter(location__in=selected_locations)
     elif search:
-        oreums = Oreum.objects.filter(nameicontains=search)
+        oreums = Oreum.objects.filter(name__icontains=search)
     else:
         oreums = Oreum.objects.all()
 

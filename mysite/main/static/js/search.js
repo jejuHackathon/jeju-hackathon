@@ -45,8 +45,21 @@ cityNo.forEach((item) => {
 
 })
 
-function searchBtn() {
-    if(document.getElementById('city_name').value == "지역을 선택해주세요") {
-        alert('지역을 선택해주세요');
+const search = document.querySelector('.list_search_btn');
+const searchButton = document.querySelector('.search-input');
+
+search?.addEventListener('click', () => {
+    let city = document.getElementById('city_name').value;
+    if(city == '지역을 선택해주세요') {
+        location.href='/list/';
+    } else {
+        location.href=`/list/?locations=${city}`;
     }
-}
+});
+
+const logoutButton = document.querySelector(".logout-button");
+
+logoutButton?.addEventListener("click", () => {
+    document.cookie = 'nickname=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
+    location.href = "/";
+});

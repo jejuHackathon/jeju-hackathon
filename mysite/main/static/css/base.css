@@ -34,3 +34,18 @@
 .search-input-wrapper .search-img {
     cursor: pointer;
 }
+
+.logout-button {
+    width: 5rem;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: var(--color-lime);
+    color: var(--color-white);
+}
+
+.logout-button:hover {
+    opacity: .8;
+}
