@@ -3,8 +3,9 @@
 |이름|MBTI|역할|한 마디|
 |------|---|---|---|
 |김성진|ISFJ|디자인 피그마 작업, BootStrap 디자인 피그마에 맞게 수정|짧은 시간이지만, 좋은 추억이 되도록 열심히 해볼게요~|
-|오흥식|INFP|BE(장고 환경 구축 + 디스커스 적용), 기능별 담당업무||
-|허진영|ISFJ|BE(오름관련 데이터 수집), Database ERD 작업||
+|오흥식|INFP|BE(장고 환경 구축 + 디스커스 적용), 기능별 담당업무|짧고 굵고 재미있게~ 화이팅 해요!!|
+|허진영|ISFJ|BE(오름관련 데이터 수집), Database ERD 작업|시간이 많지 않아 아쉬운 부분도 있지만 보람 있는 프로젝트 만들어보겠습니다.|
+|이진혁|ESFJ|BE(Session, update, delete) 작업|아직은 낯설기만한 장고이지만 열심히 만들어보겠습니다!|
 
 
 ## 🔥 Ground Rule
@@ -31,7 +32,7 @@
 
 ## 📅 개발 일정
 
-8월 28일 ~ 9월 3일 (6일)
+8월 28일 ~ 9월 2일 (5일)
 
 ## 🛠 Tools
 
@@ -59,12 +60,12 @@ django, html, css, javascript, AWS lightsail
 
 |타입|설명|
 |---|---|
-|`Feat`|새로운 기능 추가|
-|`Fix`|버그 수정|
-|`Docs`|문서 작업, 수정|
-|`Refactor`|코드 리팩토링|
-|`Style`|코드 컨벤션 수정(함수/ 변수명 변경 포함)|
-|`Chore`|소스 코드를 건들지 않는 작업(빌드 업무 수정)|
+|`feat`|새로운 기능 추가|
+|`fix`|버그 수정|
+|`docs`|문서 작업, 수정|
+|`refactor`|코드 리팩토링|
+|`style`|코드 컨벤션 수정(함수/ 변수명 변경 포함)|
+|`chore`|소스 코드를 건들지 않는 작업(빌드 업무 수정)|
 
 ## 🎨 UI
 
@@ -72,8 +73,11 @@ https://www.figma.com/file/HZkAK8Q7rPcwfE8vVBPW2O/jeju-hackathon?node-id=0%3A1
 
 ## 💽 ERD
 
+https://cdn.discordapp.com/attachments/1012601385889562638/1015257386556084346/unknown.png
+
 ## 🔧 개발 환경 및 배포 URL
 
-## 🗂 Wiki
-- Issue 관리
-- 
+http://www.oreum.icu
+
+## 🗂 Issue & PR
+- Issue 로 기능 관리 + Pull Request로 소스 관리
