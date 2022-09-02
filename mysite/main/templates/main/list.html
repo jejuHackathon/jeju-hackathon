@@ -9,7 +9,7 @@
         {% for oreum in oreums %}
             <div class="oreum-list flex-row">
                 {% if oreum.mainphoto %}
-                    <img src="{{ oreum.mainphoto.url }}" class="oreum-list--mid" alt="오름 사진" />
+                    <img src="{{ oreum.mainphoto.url }}" class="oreum-list--mid" alt="오름 사진" width="450" />
                 {% endif %}
                 <a class="oreum-list__link" href="/list/{{oreum.pk}}">
                     <div class="oreum-list__info flex-col">
@@ -42,6 +42,3 @@
 </article>
 
 {% endblock content %}
-
-{% block js %}
-{% endblock js %}
