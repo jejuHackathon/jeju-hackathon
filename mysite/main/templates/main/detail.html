@@ -6,8 +6,12 @@
         <h1 class="content-area__title">{{oreum.name}} 상세페이지</h1>
         <div class="oreum__button flex-row">
             {% if oreum.nickname == nickname %}
-                <button class="oreum__button--modify" data-id="{{oreum.pk}}"> <a href="/update/{{oreum.pk}}">수정</a></button>
-                <button class="oreum__button--delete" data-id="{{oreum.pk}}" value="{{oreum.name}}"><a href="/delete/{{oreum.pk}}">삭제</a></button>
+            <a href="/update/{{oreum.pk}}">
+                <button class="oreum__button--modify" data-id="{{oreum.pk}}">수정</button>
+            </a>
+            <a href="/delete/{{oreum.pk}}">
+                <button class="oreum__button--delete" data-id="{{oreum.pk}}" value="{{oreum.name}}">삭제</button>
+            </a>
             {% endif %}
         </div>
     </header>

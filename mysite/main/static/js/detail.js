@@ -6,7 +6,6 @@ export default function Detail() {
             const className = $button.className;
             const $modal = document.querySelector('.modal');
             const $modalContent = document.querySelector('.modal-content');
-            const id = e.target.dataset.id;
             if(className === 'oreum__button--modify') {
                 // modify page로 리다이렉트 시키기.
                 $modalContent.innerHTML = `서비스 준비중..`;
@@ -16,6 +15,5 @@ export default function Detail() {
             $modal.classList.toggle('show');
         }
     }
-    
     oreumDetailButton?.addEventListener('click', handleButtonClick);
 }
