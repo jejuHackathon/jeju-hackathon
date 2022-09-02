@@ -10,7 +10,7 @@ export default function StartPage() {
         learnButton?.addEventListener('click', handleOnClickLearnButton);
         nickName = getItem('nickName', '');
         if(nickName) {
-            location.href = '/home';
+            location.href = "/home";
         }
     }
 
@@ -24,7 +24,7 @@ export default function StartPage() {
             return;
         }
         setItem('nickName', nickName);
-        location.href = '/home';
+        location.href = "/home";
     }
 
     init();

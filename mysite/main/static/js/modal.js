@@ -7,7 +7,7 @@ export default function Modal() {
     }
 
     const handleEventListener = () => {
-        okButton.addEventListener('click', handleOkClick);
+        okButton?.addEventListener('click', handleOkClick);
     }
 
     handleEventListener();
