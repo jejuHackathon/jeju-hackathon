@@ -1,3 +1,11 @@
+/* ===== web font ===== */
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} /* 0902 */
+
 /* ===== svg ===== */
 .nav_sec1_logo svg path {
     fill: rgba(0, 0, 0, 0);
@@ -8,9 +16,11 @@
 }
 
 .nav_sec1_logo .logo {
+    font-family: 'GangwonEdu_OTFBoldA';
     font-size: var(--font-32);
-    gap: 1rem;
-}
+    line-height: 40px;
+    /* gap: 1rem; */
+} /* 0902-2 */
 
 .nav_sec1_logo svg path:hover,
 .nav_sec1_logo svg path:hover ~ .logo_text {
@@ -21,6 +31,30 @@
     font-weight: 900;
     color: #fff;
 }
+
+/* ===== main content ===== */
+#city_name {
+    width: 200px;
+    height: 35px;
+
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 40px;
+    color: #ff6b07;
+    text-align: center;
+    border: none;
+} /* 0902 */
+
+/* map_controller */
+.map_controller {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0);
+
+    cursor: pointer;
+} /* 0902 */
 
 /* ===== main content ===== */
 .list_container {
