@@ -12,7 +12,7 @@
     <!-- 이미지 캐러셀 + 자동 무한슬라이딩 구현예정 -->
     <section class="oreum-list">
         {% if oreum.mainphoto %}
-            <img src="{% static 'images/sample.png' %}" class="oreum-list--big" alt="오름 사진" />
+            <img src="{{ oreum.mainphoto.url }}" class="oreum-list--big" alt="오름 사진" />
         {% endif %}
         <div class="oreum-list flex-col">
             <div class="oreum-list__info flex-col">
