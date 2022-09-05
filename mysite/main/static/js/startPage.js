@@ -1,3 +1,5 @@
+import { setCookie } from "./cookie.js";
+
 export default function StartPage() {
     const nickNameInput = document.querySelector('.oreum-start__nickname');
     const learnButton = document.querySelector('.oreum-start__learn-button');
@@ -17,7 +19,7 @@ export default function StartPage() {
             alert('값을 입력해주세요!')
             return;
         }
-        document.cookie = "nickname=" + nickname;
+        setCookie(nickname);
         location.href = "/home";
     }
 
