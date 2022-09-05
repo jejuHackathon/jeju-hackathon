@@ -1,3 +1,5 @@
+import { deleteCookie } from './cookie.js';
+
 let cityNo = document.querySelectorAll('.j_map');
 
 let toggle = false;
@@ -60,6 +62,6 @@ search?.addEventListener('click', () => {
 const logoutButton = document.querySelector(".logout-button");
 
 logoutButton?.addEventListener("click", () => {
-    document.cookie = 'nickname=; expires=Thu, 01 Jan 1999 00:00:10 GMT;';
+    deleteCookie();
     location.href = "/";
 });

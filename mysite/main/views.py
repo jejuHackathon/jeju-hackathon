@@ -11,12 +11,16 @@ def index(request):
 
 def home(request):
     context = {
-        'locations' : Oreum.locations
+        'locations' : Oreum.locations,
+        'nickname': request.COOKIES.get('nickname'),
     }
     return render(request, 'main/home.html', context)
 
 def about(request):
-    return render(request, 'main/about.html')
+    context = {
+        'nickname': request.COOKIES.get('nickname'),
+    }
+    return render(request, 'main/about.html', context)
 
 
 def list(request):
@@ -32,7 +36,8 @@ def list(request):
         oreums = Oreum.objects.all()
 
     context = {
-        'oreums': oreums
+        'oreums': oreums,
+        'nickname': request.COOKIES.get('nickname'),
     }
 
     return render(request, 'main/list.html', context)
@@ -43,7 +48,6 @@ def detail(request, pk):
 
     context = {
         'oreum': oreum,
-        # context에 nickname값 추가 
         'nickname': request.COOKIES.get('nickname'),
     }
 
@@ -73,7 +77,8 @@ def create(request):
     context = {
         'locations': Oreum.locations,
         'oreumlevels': Oreum.oreumlevels,
-        'nightviews': Oreum.nightviews
+        'nightviews': Oreum.nightviews,
+        'nickname': request.COOKIES.get('nickname'),
     }
 
     return render(request, 'main/create.html', context)
@@ -106,7 +111,8 @@ def update(request, pk):
         'nickname': request.COOKIES.get('nickname'),
         'locations': Oreum.locations,
         'oreumlevels': Oreum.oreumlevels,
-        'nightviews': Oreum.nightviews, 
+        'nightviews': Oreum.nightviews,
+        'nickname': request.COOKIES.get('nickname'),
     }
     return render(request, "main/update.html", context)
 
